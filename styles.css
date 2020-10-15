@@ -10,6 +10,7 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 main {
@@ -28,8 +29,8 @@ main {
 }
 
 #logo {
-    height: 40vh;
-    width: auto;
+    height: 30vh;
+    width: 100%;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -50,8 +51,6 @@ main {
 }
 
 #container {
-    
-
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -107,14 +106,30 @@ main {
     text-align: left;
     display: block;
     width: 100%;
+    padding: 0.5rem 0;
 }
 
 #submit {
-    background: #f0c817fa;
+    background: #ebc20c;
     color: white;
     width: 100%;
-    padding: 0.3rem 0;
+    padding: 0.5rem 0;
     border: none;
+    font-weight: bolder;
+}
+
+#submit:hover,
+#submit:active {
+    cursor: pointer;
+    transition: all .2s;
+}
+
+#submit:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+#submit:active {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 }
 
 #footer {
