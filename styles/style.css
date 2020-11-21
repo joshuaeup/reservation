@@ -34,7 +34,7 @@ body {
   padding: 0 5rem;
   height: 100%;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 #navbar #navbar-list :nth-child(1) {
   justify-self: start;
@@ -52,11 +52,12 @@ main {
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
   text-align: center;
 }
-main #date-title {
-  font-size: 2rem;
+main #date-title,
+main #date-subTitle {
+  font-size: 2.5rem;
   color: white;
 }
 main .main-container {
@@ -79,15 +80,21 @@ main .main-container #date-container :nth-child(1) {
 main .main-container #date-container :nth-child(2) {
   border-left: solid white 3px;
 }
+main .main-container #date-subTitle {
+  font-size: 2rem;
+}
 main .main-container #launch-reserve {
-  margin-top: 2rem;
+  margin-top: 4rem;
   border: none;
   padding: 1rem;
   border-radius: 30px;
-  width: 50%;
+  width: 80%;
   justify-self: center;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #353535;
+}
+main .main-container #launch-reserve:hover {
+  cursor: pointer;
 }
 
 #form-container {

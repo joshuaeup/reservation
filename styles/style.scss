@@ -44,7 +44,7 @@ body {
         padding: 0 $padding-standard;
         height: 100%;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
 
         :nth-child(1) {
             justify-self: start;
@@ -66,11 +66,12 @@ main {
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
     text-align: center;
 
-    #date-title {
-        font-size: 2rem;
+    #date-title,
+    #date-subTitle {
+        font-size: 2.5rem;
         color: white;
     }
 
@@ -97,15 +98,23 @@ main {
             }
         }
 
+        #date-subTitle {
+            font-size: 2rem;
+        }
+
         #launch-reserve {
-            margin-top: 2rem;
+            margin-top: 4rem;
             border: none;
             padding: $padding-standard - 4;
             border-radius: 30px;
-            width: 50%;
+            width: 80%;
             justify-self: center;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             color: rgb(53, 53, 53);
+        }
+
+        #launch-reserve:hover {
+            cursor: pointer;
         }
     }
 }
