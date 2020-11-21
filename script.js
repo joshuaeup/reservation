@@ -11,11 +11,15 @@ const subTitleEl = document.getElementById("date-subTitle");
 // Runs as soon as page loads
 (function () {
     // Updates UI
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    updateDisplay(hour, minute);
     setInterval(() => {
         // Variables
-        const date = new Date();
-        const hour = date.getHours();
-        const minute = date.getMinutes();
+        date = new Date();
+        hour = date.getHours();
+        minute = date.getMinutes();
         updateDisplay(hour, minute);
     }, 500);
 })();
