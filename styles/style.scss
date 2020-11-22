@@ -17,6 +17,7 @@ html {
 }
 
 body {
+    overflow-y: hidden;
     min-height: 100%;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -96,6 +97,11 @@ main {
 
     @media screen and (max-width: 1000px) {
         padding-bottom: 25vh;
+    }
+
+    @media screen and (max-width: 450px) {
+        height: 100%;
+        padding-top: 5vh;
     }
 
     #date-title,
