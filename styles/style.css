@@ -45,6 +45,28 @@ body {
 #navbar #navbar-list :nth-child(3) {
   justify-self: end;
 }
+@media screen and (max-width: 1000px) {
+  #navbar #navbar-list {
+    grid-template-columns: 1fr;
+  }
+  #navbar #navbar-list :nth-child(1) {
+    margin-top: 0.4rem;
+    justify-self: center;
+  }
+  #navbar #navbar-list :nth-child(2) {
+    margin-top: 0.4rem;
+    justify-self: center;
+  }
+  #navbar #navbar-list :nth-child(3) {
+    margin-top: 0.4rem;
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #navbar {
+    height: auto;
+  }
+}
 
 main {
   height: 92vh;
@@ -55,6 +77,11 @@ main {
   padding-bottom: 15vh;
   text-align: center;
 }
+@media screen and (max-width: 1000px) {
+  main {
+    padding-bottom: 25vh;
+  }
+}
 main #date-title,
 main #date-subTitle {
   font-size: 2.5rem;
@@ -62,7 +89,8 @@ main #date-subTitle {
 }
 main .main-container {
   display: grid;
-  width: 25vw;
+  min-width: 25vw;
+  max-width: auto;
 }
 main .main-container #date-container {
   display: grid;
@@ -104,7 +132,8 @@ main .main-container #launch-reserve:hover {
 #form-container {
   background: white;
   height: auto;
-  width: 30vw;
+  min-width: 30vw;
+  max-width: 80%;
   border-radius: 25px;
   display: grid;
   justify-items: center;

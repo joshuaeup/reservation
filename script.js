@@ -28,7 +28,7 @@ const subTitleEl = document.getElementById("date-subTitle");
 // Function to update UI
 function updateDisplay(hour, minute) {
     parseHour(hour);
-    minuteEl.innerHTML = minute;
+    minuteEl.innerHTML = String(minute).padStart(2, "0");
     checkMealTime(hour);
 }
 
@@ -62,7 +62,7 @@ function launchReservation() {
                 <input
                     id="your_name"
                     type="text"
-                    placeholder="&#xf406    Your Name (e.g. John doe)"
+                    placeholder="&#xf406    Your Name"
                     
                 /><br />
                 <input

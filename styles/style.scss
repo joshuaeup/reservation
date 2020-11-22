@@ -59,6 +59,29 @@ body {
         :nth-child(3) {
             justify-self: end;
         }
+
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+
+            :nth-child(1) {
+                margin-top: 0.4rem;
+                justify-self: center;
+            }
+
+            :nth-child(2) {
+                margin-top: 0.4rem;
+                justify-self: center;
+            }
+
+            :nth-child(3) {
+                margin-top: 0.4rem;
+                justify-self: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        height: auto;
     }
 }
 
@@ -71,6 +94,10 @@ main {
     padding-bottom: 15vh;
     text-align: center;
 
+    @media screen and (max-width: 1000px) {
+        padding-bottom: 25vh;
+    }
+
     #date-title,
     #date-subTitle {
         font-size: 2.5rem;
@@ -79,7 +106,8 @@ main {
 
     .main-container {
         display: grid;
-        width: 25vw;
+        min-width: 25vw;
+        max-width: auto;
 
         #date-container {
             display: grid;
@@ -128,7 +156,8 @@ main {
 #form-container {
     background: white;
     height: auto;
-    width: 30vw;
+    min-width: 30vw;
+    max-width: 80%;
     border-radius: $radius-standard;
     display: grid;
     justify-items: center;
