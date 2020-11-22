@@ -15,6 +15,7 @@ const subTitleEl = document.getElementById("date-subTitle");
     let hour = date.getHours();
     let minute = date.getMinutes();
     updateDisplay(hour, minute);
+    // Updates every half of a second
     setInterval(() => {
         // Variables
         date = new Date();
@@ -24,28 +25,36 @@ const subTitleEl = document.getElementById("date-subTitle");
     }, 500);
 })();
 
+// Function to update UI
 function updateDisplay(hour, minute) {
     parseHour(hour);
     minuteEl.innerHTML = minute;
+    checkMealTime(hour);
+}
+
+// Function to check which meal message to print to DOM
+function checkMealTime(hour) {
     let welcomeMessage = "";
 
     if (hour < 12) {
         welcomeMessage = "It's Breakfast Time 🥞";
-    } else if (hour === 12) {
+    } else if (hour < 14) {
         welcomeMessage = "It's Lunch Time 🍜";
     } else {
         welcomeMessage = "It's Dinner Time 🍽";
     }
-
+    // Updates DOM
     subTitleEl.innerHTML = welcomeMessage;
 }
 
 // Function to hide banner and show form
 function launchReservation() {
+    // Remove hour refresh
     clearInterval();
     mainContainerEl.className += " hide";
     console.log("Clicked");
 
+    // HTML form
     const formHtml = `
         <div id="form-container">
             <h2 id="form-container-title">Create Reservation</h2>
@@ -87,6 +96,7 @@ function launchReservation() {
     }, 1000);
 }
 
+// Function to convert hour to Standard Time
 function parseHour(hour) {
     if (hour > 0 && hour <= 12) {
         // Checks if hour value falls within 12
@@ -100,6 +110,7 @@ function parseHour(hour) {
     }
 }
 
+// Btn for form submission
 function reserveSlot(event) {
     event.preventDefault();
     alert("The form was submitted");
