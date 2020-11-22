@@ -25,7 +25,7 @@ const subTitleEl = document.getElementById("date-subTitle");
 })();
 
 function updateDisplay(hour, minute) {
-    hourEl.innerHTML = String(hour).padStart(2, "0");
+    parseHour(hour);
     minuteEl.innerHTML = minute;
     let welcomeMessage = "";
 
@@ -85,6 +85,19 @@ function launchReservation() {
     setTimeout(function () {
         mainEl.innerHTML = formHtml;
     }, 1000);
+}
+
+function parseHour(hour) {
+    if (hour > 0 && hour <= 12) {
+        // Checks if hour value falls within 12
+        hourEl.innerHTML = String(hour).padStart(2, "0");
+    } else if (hour > 12) {
+        // Checks if hour value exceeds 12
+        hourEl.innerHTML = String(hour - 12).padStart(2, "0");
+    } else if (hour == 0) {
+        // Checks if hour value equals 0 then sets to 12
+        hourEl.innerHTML = "12";
+    }
 }
 
 function reserveSlot(event) {

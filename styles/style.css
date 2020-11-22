@@ -84,24 +84,28 @@ main .main-container #date-subTitle {
   font-size: 2rem;
 }
 main .main-container #launch-reserve {
+  background-color: #efefef;
   margin-top: 4rem;
   border: none;
   padding: 1rem;
-  border-radius: 30px;
+  border-radius: 25px;
   width: 80%;
   justify-self: center;
   font-size: 1.5rem;
   color: #353535;
+  transition: all 0.3s;
 }
 main .main-container #launch-reserve:hover {
   cursor: pointer;
+  transform: translateY(-5px);
+  background-color: white;
 }
 
 #form-container {
   background: white;
   height: auto;
   width: 30vw;
-  border-radius: 20px;
+  border-radius: 25px;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -116,35 +120,8 @@ main .main-container #launch-reserve:hover {
   text-align: left;
   width: 100%;
   animation: fadeIn 1s ease forwards;
-}
-#form-container #form label {
-  background: #202020;
-  color: white;
-  padding: 2px 4px;
-  text-transform: capitalize;
-  display: block;
-}
-#form-container #form input {
-  font-family: FontAwesome;
-  display: inline-block;
-  width: 100%;
-  font-size: 1.3rem;
-  margin: 1rem 0;
-  padding: 0.5rem;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px #bdbdbd solid;
-}
-#form-container #form #reserve {
-  cursor: pointer;
-  margin: 0.8rem 0;
-  background-color: #4f88ce;
-  color: white;
-  border: none;
-  width: 100%;
-  font-size: 1.3rem;
-  padding: 0.5rem 0;
+  display: grid;
+  justify-items: center;
 }
 @keyframes fadeIn {
   0% {
@@ -153,6 +130,41 @@ main .main-container #launch-reserve:hover {
   100% {
     opacity: 1;
   }
+}
+#form-container #form label {
+  background: #202020;
+  color: white;
+  padding: 2px 4px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+#form-container #form input {
+  font-family: FontAwesome;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px #bdbdbd solid;
+}
+#form-container #form #reserve {
+  cursor: pointer;
+  margin: 1.2rem 0;
+  background-color: #4279bb;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 70%;
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+  transition: all 0.3s;
+}
+#form-container #form #reserve:hover {
+  width: 100%;
+  background-color: #6794c9;
 }
 
 .hide {
